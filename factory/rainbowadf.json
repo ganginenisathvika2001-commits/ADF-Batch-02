@@ -1,0 +1,9 @@
+{
+	"name": "rainbowadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3cdf0dca-312a-4b0e-8ae6-04756829c67b",
+		"tenantId": "422b8a94-6319-4c55-930e-7fc585ec0a00"
+	}
+}
