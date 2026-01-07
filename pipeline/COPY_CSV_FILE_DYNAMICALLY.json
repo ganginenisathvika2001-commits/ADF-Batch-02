@@ -52,8 +52,14 @@
 						"referenceName": "DS_ADLS_CSV_FILE_DYNAMICALLY",
 						"type": "DatasetReference",
 						"parameters": {
-							"foldername": "sales",
-							"filename": "Book(Sheet1).csv"
+							"foldername": {
+								"value": "@pipeline().parameters.Sourcefolder",
+								"type": "Expression"
+							},
+							"filename": {
+								"value": "@pipeline().parameters.sourcefilename",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -62,13 +68,33 @@
 						"referenceName": "DS_ADLS_CSV_FILE_DYNAMICALLY",
 						"type": "DatasetReference",
 						"parameters": {
-							"foldername": "sample file",
-							"filename": "Book(Sheet1).csv"
+							"foldername": {
+								"value": "@pipeline().parameters.targetfolder",
+								"type": "Expression"
+							},
+							"filename": {
+								"value": "@pipeline().parameters.targetfilename",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"Sourcefolder": {
+				"type": "string"
+			},
+			"targetfolder": {
+				"type": "string"
+			},
+			"sourcefilename": {
+				"type": "string"
+			},
+			"targetfilename": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "DATA_MIGRATION"
 		},
