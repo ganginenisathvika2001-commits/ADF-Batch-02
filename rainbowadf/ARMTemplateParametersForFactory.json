@@ -8,8 +8,20 @@
 		"LS_ADLS_GEN2_accountKey": {
 			"value": ""
 		},
+		"LS_AZURE_SQL_DB_password": {
+			"value": ""
+		},
 		"LS_ADLS_GEN2_properties_typeProperties_url": {
 			"value": "https://rainbowadlsstorage.dfs.core.windows.net/"
+		},
+		"LS_AZURE_SQL_DB_properties_typeProperties_server": {
+			"value": "rainbowserver.database.windows.net"
+		},
+		"LS_AZURE_SQL_DB_properties_typeProperties_database": {
+			"value": "raindow_db"
+		},
+		"LS_AZURE_SQL_DB_properties_typeProperties_userName": {
+			"value": "rainbow-user"
 		}
 	}
 }
