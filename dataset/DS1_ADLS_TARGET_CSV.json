@@ -1,5 +1,5 @@
 {
-	"name": "DS1_ADLS_SOURCE_CSV",
+	"name": "DS1_ADLS_TARGET_CSV",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLS_GEN2",
@@ -13,7 +13,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Book(Sheet1).csv",
+				"fileName": "Copied booksheet",
+				"folderPath": "archieve datasets",
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
