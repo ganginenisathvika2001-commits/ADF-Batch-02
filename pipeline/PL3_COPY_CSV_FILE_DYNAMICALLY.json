@@ -114,8 +114,14 @@
 						"referenceName": "DS3_CSV_FILE_DYNAMIC",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderName": "SqlTables",
-							"FileName": "ProductCategory20260109"
+							"FolderName": {
+								"value": "@pipeline().parameters.SourceFolderName",
+								"type": "Expression"
+							},
+							"FileName": {
+								"value": "@pipeline().parameters.SourceFileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -124,18 +130,30 @@
 						"referenceName": "DS3_CSV_FILE_DYNAMIC",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderName": "archieve datasets",
-							"FileName": "productdetails"
+							"FolderName": {
+								"value": "@pipeline().parameters.TargetFolderName",
+								"type": "Expression"
+							},
+							"FileName": {
+								"value": "@pipeline().parameters.TargetFileName",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
 		"parameters": {
-			"FolderName": {
+			"SourceFolderName": {
 				"type": "string"
 			},
-			"FileName": {
+			"TargetFolderName": {
+				"type": "string"
+			},
+			"SourceFileName": {
+				"type": "string"
+			},
+			"TargetFileName": {
 				"type": "string"
 			}
 		},
