@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -32,7 +33,7 @@
 				}
 			},
 			{
-				"name": "ForEachfile",
+				"name": "ForEachFile",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -51,7 +52,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copy eachfile",
+							"name": "CopyEachFile",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -109,11 +110,11 @@
 							]
 						},
 						{
-							"name": "Deletefile",
+							"name": "deletefile",
 							"type": "Delete",
 							"dependsOn": [
 								{
-									"activity": "Copy eachfile",
+									"activity": "CopyEachFile",
 									"dependencyConditions": [
 										"Succeeded"
 									]
@@ -139,13 +140,7 @@
 										}
 									}
 								},
-								"logStorageSettings": {
-									"linkedServiceName": {
-										"referenceName": "LS_ADLS_GEN2",
-										"type": "LinkedServiceReference"
-									}
-								},
-								"enableLogging": true,
+								"enableLogging": false,
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
 									"recursive": true,
