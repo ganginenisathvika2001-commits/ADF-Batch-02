@@ -1,0 +1,18 @@
+{
+	"name": "DS_BINARY_DATASET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_GEN2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "SqlTables",
+				"fileSystem": "raw"
+			}
+		}
+	}
+}
