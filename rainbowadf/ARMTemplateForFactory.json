@@ -1771,7 +1771,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('LookInfoSchema').output",
+								"value": "@activity('LookInfoSchema').output.value",
 								"type": "Expression"
 							},
 							"batchCount": 20,
@@ -1837,7 +1837,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"FileName": {
-													"value": "@Concat(\r\n   item().TABLE_NAME\r\n   formatDateTime(utcNow(),'yyyy-MM-dd')\r\n)",
+													"value": "@concat(\n   item().TABLE_NAME,\n   formatDateTime(utcNow(),'yyyy-MM-dd')\n)",
 													"type": "Expression"
 												}
 											}
