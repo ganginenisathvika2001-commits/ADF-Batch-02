@@ -46,7 +46,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LookInfoSchema').output",
+						"value": "@activity('LookInfoSchema').output.value",
 						"type": "Expression"
 					},
 					"batchCount": 20,
