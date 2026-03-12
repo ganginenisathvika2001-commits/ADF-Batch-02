@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "rainbowadf"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"LS_ADLS_GEN2_accountKey": {
 			"value": ""
 		},
