@@ -2282,7 +2282,7 @@
 								"parameters": {}
 							},
 							"fieldList": [
-								"lastModified"
+								"itemName"
 							],
 							"storeSettings": {
 								"type": "AzureBlobFSReadSettings",
